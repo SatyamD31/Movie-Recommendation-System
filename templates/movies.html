@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie/TV Series Recommendation Engine</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/movies.css') }}">
+        <!-- <link rel="stylesheet" type="text/css" href="../static/styles/movies.css"> -->
+    </head>
+    <body>
+        <form autocomplete="off" action="{{ url_for('movies') }}" method="POST" class="movies">
+            <h1>Get Movie Recommendation</h1>
+            <div class="field">
+                <h1>{{ query }}</h1>
+                <input type="text" id="movieName" name="movieName" placeholder="Movie Name here..." required>
+                <!-- <span data-placeholder="Movie Name here..."></span> -->
+            </div>
+            <input type="submit" id="submit" value="Search" class="search">
+            <div class="link"><a href="{{ url_for('index') }}">Go Back?</a></div>
+        </form>
+
+        <script type="text/javascript" src="{{ url_for('static', filename='fuzzyMatching_m.js') }}"></script>
+        <!-- <script type="text/javascript" src="../static/fuzzyMatching_m.js"></script> -->
+        
+    </body>
+</html>

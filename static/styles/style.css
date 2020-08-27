@@ -1,0 +1,957 @@
+/* ############################################################################################## */
+                                        /* COFFEE CSS */
+/* ############################################################################################## */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+}
+
+.containerC {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    margin-top: 200px;
+    margin-left: 90px;
+}
+
+.coaster {
+    width: 100%;
+    height: 6%;
+    background-color: #7c3c21;
+    border-radius: 10px;
+    position: relative;
+}
+
+.coaster::after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: #63301a;
+    position: absolute;
+    right: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.halfCup {
+    height: 30%;
+    width: 30%;
+    background-color: white;
+    position: absolute;
+    bottom: 21px;
+    left: 50px;
+    border-radius: 15px 0 0 0;
+}
+
+.halfCup::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #292929;
+    border-right: 20px solid transparent;
+}
+
+.cup {
+    width: 60%;
+    height: 30%;
+    background-color: #f9f9f9;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    
+}
+
+.cup::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #292929;
+    border-left: 20px solid transparent;
+    position: absolute;
+    right: -3px;
+    bottom: 0;
+}
+
+.handle {
+    height: 60px;
+    width: 40px;
+    border-radius: 0 50% 50% 0;
+    background-color: #292929;
+    border: 10px solid #f9f9f9;
+    position: absolute;
+    right: 26px;
+    bottom: 40px;
+    transform: rotate(10deg);
+}
+
+.steamContainer {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.steam1, .steam2, .steam3, .steam4, .steam5 {
+    width: 20%;
+    height: 5%;
+    background-color: #eadca6;
+    border-radius: 10px;
+    animation: steamFloating 1.5s infinite linear;
+}
+
+.steam1 {
+    align-self: center;
+    animation-delay: 1.3s;
+}
+
+.steam2 {
+    width: 30%;
+    height: 100%;
+    animation-delay: 1s;
+    position: relative;
+    right: 50px;
+}
+
+.steam3 {
+    width: 50%;
+    height: 100%;
+    animation-delay: 0.8s;
+    position: relative;
+    left: 40px;
+}
+
+.steam4 {
+    width: 70%;
+    align-self: center;
+    animation-delay: 0.5s;
+}
+
+.steam5 {
+    width: 35%;
+    height: 100%;
+    animation-delay: 0.2s;
+    position: relative;
+    right: 20px;
+}
+
+.steams {
+    width: 200px;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.bubble2, .bubble3, .bubble5 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e2c275;
+    animation: bubbleFloating 1.5s infinite ease-in;
+    position: relative;
+}
+
+.bubble3 {
+    top: 15px;
+    right: 130px;
+    animation-delay: 0.7s;
+}
+
+.bubble5 {
+    top: 5px;
+    animation-delay: 0.4s;
+}
+
+@keyframes steamFloating {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(0.8);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes bubbleFloating {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ############################################################################################## */
+                                        /* BURGER CSS */
+/* ############################################################################################## */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #274f35;
+    height: 100vh;
+    display: flex;
+}
+
+.containerB {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.saladTomatoContainer {
+    display: flex;
+    width: 90px;
+    height: 5px;
+}
+
+.bottomBun {
+    width: 100px;
+    height: 25px;
+    border: 5px solid black;
+    border-radius: 3px 3px 20px 20px;
+    background-color: #f2ca97;
+    position: relative;
+    bottom: 500px;
+    animation: loader1 2s infinite linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.salad {
+    width: 40%;
+    height: 100%;
+    border: 5px solid black;
+    border-bottom: none;
+    border-top: none;
+    background-color: #6aa32b;
+    position: relative;
+    bottom: 500px;
+    animation: loader2 2s infinite linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.tomato {
+    width: 60%;
+    height: 100%;
+    background-color: #e22949;
+    border: 5px solid black;
+    border-bottom: none;
+    border-top: none;
+    position: relative;
+    bottom: 500px;
+    animation: loader3 2s infinite linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.meat {
+    width: 100px;
+    height: 25px;
+    border: 5px solid black;
+    background-color: #7a5335;
+    border-radius: 5px;
+    position: relative;
+    bottom: 500px;
+    animation: loader4 2s infinite linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.cheese {
+    width: 90px;
+    height: 5px;
+    border: 5px solid black;
+    border-bottom: none;
+    border-top: none;
+    background-color: #f8e71d;
+    position: relative;
+    bottom: 500px;
+    animation: loader5 2s infinite linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.cheeseDrop {
+    background-color: #f8e71d;
+    width: 15px;
+    height: 15px;
+    border: 5px solid black;
+    border-left: none;
+    border-top: none;
+    position: absolute;
+    border-radius: 20% 20% 40% 20%;
+    transform: rotate(45deg);
+    right: 20%;
+    top: 1px;
+    z-index: 1;
+    animation: drop 2s infinite linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.topBun {
+    width: 100px;
+    height: 40px;
+    border: 5px solid black;
+    border-radius: 50% 50% 5% 5%;
+    background-color: #f2ca97;
+    position: relative;
+    z-index: 2;
+    bottom: 500px;
+    animation: loader6 2s infinite linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.sesame1, .sesame2, .sesame3, .sesame4, .sesame5, .sesame6 {
+    width: 7px;
+    height: 3px;
+    background-color: #cea97a;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 20%;
+}
+
+.sesame2 {
+    top: 70%;
+    left: 35%;
+}
+
+.sesame3 {
+    top: 35%;
+    left: 35%;
+}
+
+.sesame4 {
+    top: 40%;
+    left: 60%;
+}
+
+.sesame5 {
+    top: 60%;
+    left: 75%;
+}
+
+.sesame6 {
+    top: 55%;
+    left: 50%;
+}
+
+@keyframes loader1 {
+    0% {
+        bottom: 500px;
+        transform: rotate(10deg);
+    }
+    40% {
+        transform: rotate(10deg);
+    }
+    45% {
+        bottom: 0;
+        transform: rotate(0deg);
+    }
+    67% {
+        height: 25px;
+    }
+    68% {
+        height: 20px;
+    }
+    70% {
+        height: 25px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes loader2 {
+    0% {
+        bottom: 500px;
+    }
+    10% {
+        bottom: 500px;
+    }
+    60% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes loader3 {
+    0% {
+        bottom: 500px;
+    }
+    15% {
+        bottom: 500px;
+    }
+    65% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes loader4 {
+    0% {
+        bottom: 500px;
+    }
+    20% {
+        bottom: 500px;
+    }
+    68% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes loader5 {
+    0% {
+        bottom: 500px;
+    }
+    25% {
+        bottom: 500px;
+    }
+    70% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes loader6 {
+    0% {
+        bottom: 500px;
+    }
+    30% {
+        bottom: 500px;
+    }
+    72% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) scale(0);
+    }
+    70% {
+        opacity: 0;
+        transform: rotate(45deg) scale(0);
+        top: -5px;
+    }
+    85% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+        top: 1px;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+        top: 1px;
+    }
+}
+
+/* ############################################################################################## */
+                                        /* HEADING CSS */
+/* ############################################################################################## */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(32, 35, 48);
+}
+
+#logo {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    animation: fill 0.5s ease forwards 2.0s;
+}
+
+#logo path:nth-child(odd){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards;
+}
+
+#logo path:nth-child(even){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+
+/* #logo path:nth-child(3){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+
+#logo path:nth-child(4){
+
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+
+#logo path:nth-child(5){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+
+#logo path:nth-child(6){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+
+#logo path:nth-child(7){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 1.8s;
+}
+
+#logo path:nth-child(8){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 2.1s;
+}
+
+#logo path:nth-child(9){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 2.4s;
+}
+
+#logo path:nth-child(10){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 2.7s;
+}
+
+#logo path:nth-child(11){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 3.0s;
+}
+
+#logo path:nth-child(12){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 3.3s;
+}
+
+#logo path:nth-child(13){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 3.6s;
+}
+
+#logo path:nth-child(14){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 3.9s;
+}
+
+#logo path:nth-child(15){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 4.2s;
+}
+
+#logo path:nth-child(16){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 4.5s;
+}
+
+#logo path:nth-child(17){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 4.8s;
+}
+
+#logo path:nth-child(18){   
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 5.1s;
+}
+
+#logo path:nth-child(19){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 5.4s;
+}
+
+#logo path:nth-child(20){
+    stroke-dasharray: 342px;
+    stroke-dashoffset: 342px;
+    animation: line-anim 2s ease forwards 5.7s;
+} */
+
+@keyframes line-anim {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: #00f0ff;
+    }
+}
+
+/* ############################################################################################## */
+/* ############################################################################################## */
+
+@supports (display: grid) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.625rem;
+        grid-template-areas: ". main main ." ". main main .";
+    }
+
+    #container {
+        grid-area: main;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+/* ############################################################################################## */
+                                        /* BUTTON CSS */
+/* ############################################################################################## */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #292929;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#wrapperM{
+    width: 25vw;
+    height: 135vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapperT{
+    width: 25vw;
+    height: 135vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-super-cool-btn{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing:1px;
+    font-size:2rem;
+    box-sizing: border-box;
+}
+
+.my-super-cool-btn span{
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+}
+
+.my-super-cool-btn span:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display:block;
+    position: absolute;
+    border-radius: 100%;
+    /* border: 7px solid #F3CF14; */
+    border: 7px solid #00f0ff;
+    box-sizing: border-box;
+    transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
+    box-shadow: 0 30px 85px rgba(0,0,0,0.14), 0 15px 35px rgba(0,0,0,0.14);
+}
+
+.my-super-cool-btn:hover span:before{
+    transform: scale(0.8);
+    box-shadow: 0 20px 55px rgba(0,0,0,0.14), 0 15px 35px rgba(0,0,0,0.14);
+}
+
+.my-super-cool-btn .dots-container{
+    opacity:0;
+    animation: intro 0.01s;
+    animation-fill-mode: forwards;
+}
+
+.my-super-cool-btn .dot{
+    width:8px;
+    height:8px;
+    display:block;
+    /* background-color:#F3CF14; */
+    background-color: yellow;
+    border-radius:100%;
+    position:absolute;
+    transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
+}
+
+.my-super-cool-btn .dot:nth-child(1){
+    top:50px;
+    left:50px;
+    transform:rotate(-140deg);
+    animation: swag1-out 0.3s;
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+
+.my-super-cool-btn .dot:nth-child(2){
+    top:50px;
+    right:50px;
+    transform:rotate(140deg);
+    animation: swag2-out 0.3s;
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+
+.my-super-cool-btn .dot:nth-child(3){
+    bottom:50px;
+    left:50px;
+    transform:rotate(140deg);
+    animation: swag3-out 0.3s;
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+
+.my-super-cool-btn .dot:nth-child(4){
+    bottom:50px;
+    right:50px;
+    transform:rotate(-140deg);
+    animation: swag4-out 0.3s;
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+
+.my-super-cool-btn:hover .dot:nth-child(1){
+    animation: swag1 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.my-super-cool-btn:hover .dot:nth-child(2){
+    animation: swag2 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.my-super-cool-btn:hover .dot:nth-child(3){
+    animation: swag3 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.my-super-cool-btn:hover .dot:nth-child(4){
+    animation: swag4 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes intro {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@keyframes swag1 {
+    0% {
+        top:50px;
+        left:50px;
+        width:8px;
+    }
+    50% {
+        width:30px;
+        opacity:1;
+    }
+    100% {
+        top:20px;
+        left:20px;
+        width:8px;
+        opacity:1;
+    }
+}
+
+@keyframes swag1-out {
+    0% { 
+        top:20px;
+        left:20px;
+        width:8px;
+    }
+    50% {
+        width:30px;
+        opacity:1;
+    }
+    100% {
+        top:50px;
+        left:50px;
+        width:8px;
+        opacity:0;
+  }
+}
+
+@keyframes swag2 {
+    0% {
+        top:50px;
+        right:50px;
+        width:8px;
+    }
+    50% {
+        width:30px;
+        opacity:1;
+    }
+    100% {
+        top:20px;
+        right:20px;
+        width:8px;
+        opacity:1;
+    }
+}
+
+@keyframes swag2-out {
+    0% {
+        top:20px;
+        right:20px;
+        width:8px;
+    }
+    50% {
+        width:30px;
+        opacity:1;
+    }
+    100% {
+        top:50px;
+        right:50px;
+        width:8px;
+        opacity:0;
+    }
+}
+
+@keyframes swag3 {
+    0% {
+        bottom:50px;
+        left:50px;
+        width:8px;
+    }
+    50% {
+        width:30px;
+        opacity:1;
+    }
+    100% {
+        bottom:20px;
+        left:20px;
+        width:8px;
+        opacity:1;
+    }
+}
+
+@keyframes swag3-out {
+    0% {
+        bottom:20px;
+        left:20px;
+        width:8px;
+    }
+    50% {
+        width:30px;
+        opacity:1;
+    }
+    100% {
+        bottom:50px;
+        left:50px;
+        width:8px;
+        opacity:0;
+    }
+}
+
+@keyframes swag4 {
+    0% {
+        bottom:50px;
+        right:50px;
+        width:8px;
+    }
+    50% {
+        width:30px;
+        opacity:1;
+    }
+    100% {
+        bottom:20px;
+        right:20px;
+        width:8px;
+        opacity:1;
+    }
+}
+
+@keyframes swag4-out {
+    0% {
+        bottom:20px;
+        right:20px;
+        width:8px;
+    }
+    50% {
+        width:30px;
+        opacity:1;
+    }
+    100% {
+        bottom:50px;
+        right:50px;
+        width:8px;
+        opacity:0;
+    }
+}

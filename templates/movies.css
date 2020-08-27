@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: montserrat;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /* background-image: linear-gradient(to bottom , #8e44ad, #3498db ); */
+    background-image: linear-gradient(to bottom, #5c0071ff, #00f0ff);
+}
+
+.movies {
+    width: 360px;
+    background: #f1f1f1;
+    height: 450px;
+    padding: 80px 40px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    filter: blur(0.4px);
+    box-shadow:
+    /*bottom shadow*/
+    0px 20px 20px rgba(0, 0, 0, 0.05),
+    0px 5px 10px rgba(0, 0, 0, 0.2),
+    /*long bottom shadow*/
+    0px 70px 50px rgba(0, 0, 0, 0.3),
+    /*right shadow*/
+    30px 50px 50px rgba(0, 0, 0, 0.2),
+    /*left shadow*/
+    -30px 50px 50px rgba(0, 0, 0, 0.2),
+    /*right inset*/
+    inset 20px 0px 60px rgba(0, 0, 0, 0.1),
+    /*left inset*/
+    inset -20px 0px 60px rgba(0, 0, 0, 0.1);
+}
+
+.movies h1 {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    margin-bottom: 50px;
+    margin-top: -20px;
+}
+
+.field {
+    border-bottom: 2px solid black;
+    position: relative;
+    margin: 30px 0;
+}
+
+.field input {
+    font-size: 17px;
+    color: #333;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 2px;
+    height: 40px;
+}
+
+/* .field span::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    color: #adadad;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.field span::after {
+    top: 100%;
+    left: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(120deg, #3498db, #8e44ad);
+    transition: 0.5s;
+}
+
+.focus+span::before {
+    top: -5px;
+}
+
+.focus+span::after {
+    width: 100%;
+} */
+
+.search {
+    display: block;
+    width: 60%;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(120deg, #3498db, #8e44ad);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 20px;
+    transform: translateX(32%);
+}
+
+.search:hover {
+    background-position: right;
+}
+
+.link {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.autocomplete-items {
+    position: absolute;
+    /* border: 1px solid #d4d4d4; */
+    border: 1px solid black;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+    font-size: 17px;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    color: #ffffff; 
+}

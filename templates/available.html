@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie/TV Series Recommendation Engine</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/available.css') }}">
+    </head>
+    <body>
+        <div class="recommendations">
+            <div class="header"><b>Recommendations</b></div>
+            <!-- <h2>Recommendations</h2> -->
+            <p style="font-size: larger;">Top 10 Recommendations for: <b>{{ query }}</b></p>
+            <!-- <table class="movieTable"> -->
+            <table cellspacing="0">
+                <tr>
+                    <th>Title</th>
+                    <th>Release Year</th>
+                    <th>Rating</th>
+                    <th>Genre</th>
+                </tr>
+                <tbody class="tableBody">
+                    <tr>
+                        <td>{{ name[0] }}</td>
+                        <!-- <td>{{ '%0.0f' % year[0]|float }}</td> -->
+                        <td>{{ year[0] }}</td>
+                        <td>{{ rating[0] }}</td>
+                        <td>{{ genre[0] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ name[1] }}</td>
+                        <!-- <td>{{ '%0.0f' % year[1]|float }}</td> -->
+                        <td>{{ year[1] }}</td>
+                        <td>{{ rating[1] }}</td>
+                        <td>{{ genre[1] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ name[2] }}</td>
+                        <!-- <td>{{ '%0.0f' % year[2]|float }}</td> -->
+                        <td>{{ year[2] }}</td>
+                        <td>{{ rating[2] }}</td>
+                        <td>{{ genre[2] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ name[3] }}</td>
+                        <!-- <td>{{ '%0.0f' % year[3]|float }}</td> -->
+                        <td>{{ year[3] }}</td>
+                        <td>{{ rating[3] }}</td>
+                        <td>{{ genre[3] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ name[4] }}</td>
+                        <!-- <td>{{ '%0.0f' % year[4]|float }}</td> -->
+                        <td>{{ year[4] }}</td>
+                        <td>{{ rating[4] }}</td>
+                        <td>{{ genre[4] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ name[5] }}</td>
+                        <!-- <td>{{ '%0.0f' % year[5]|float }}</td> -->
+                        <td>{{ year[5] }}</td>
+                        <td>{{ rating[5] }}</td>
+                        <td>{{ genre[5] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ name[6] }}</td>
+                        <!-- <td>{{ '%0.0f' % year[6]|float }}</td> -->
+                        <td>{{ year[6] }}</td>
+                        <td>{{ rating[6] }}</td>
+                        <td>{{ genre[6] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ name[7] }}</td>
+                        <!-- <td>{{ '%0.0f' % year[7]|float }}</td> -->
+                        <td>{{ year[7] }}</td>
+                        <td>{{ rating[7] }}</td>
+                        <td>{{ genre[7] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ name[8] }}</td>
+                        <!-- <td>{{ '%0.0f' % year[8]|float }}</td> -->
+                        <td>{{ year[8] }}</td>
+                        <td>{{ rating[8] }}</td>
+                        <td>{{ genre[8] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ name[9] }}</td>
+                        <!-- <td>{{ '%0.0f' % year[9]|float }}</td> -->
+                        <td>{{ year[9] }}</td>
+                        <td>{{ rating[9] }}</td>
+                        <td>{{ genre[9] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
